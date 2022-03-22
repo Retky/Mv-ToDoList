@@ -1,5 +1,5 @@
 {
-  "name": "WebpackBoilerplate",
+  "name": "ToDoList",
   "version": "1.0.0",
   "description": "Basic HTML, CSS &amp; JavaScript with Webpack",
   "private": true,
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Retky/WebpackBoilerplate.git"
+    "url": "git+https://github.com/Retky/Mv-ToDoList.git"
   },
   "keywords": [],
   "author": "Retky",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Retky/WebpackBoilerplate/issues"
+    "url": "https://github.com/Retky/Mv-ToDoList/issues"
   },
-  "homepage": "https://github.com/Retky/WebpackBoilerplate#readme",
+  "homepage": "https://github.com/Retky/Mv-ToDoList#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
@@ -29,6 +29,6 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+
   }
 }
