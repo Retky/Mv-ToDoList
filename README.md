@@ -19,6 +19,14 @@ If you haven't yet, you should first [set up Git.](https://docs.github.com/en/ge
   - Change the current working directory to the location where you want the cloned directory
   - Type `git clone`, and then paste the URL you copied earlier
   - Press Enter. Your local clone will be created
+- Install webpack
+  - Required to run `npm init -y`
+  - Webpack `npm install webpack webpack-cli --save-dev`
+  - HTML plugin `npm install --save-dev html-webpack-plugin`
+  - CSS plugin `npm install --save-dev style-loader css-loader`
+  - Live Server `npm install --save-dev webpack-dev-server`
+
+For the Live Server `npm start` http://localhost:8080/
 
 ## Author
 
