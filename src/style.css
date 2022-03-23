@@ -29,4 +29,15 @@ h1 {
 
 #add {
   padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#enter {
+  border: none;
+  background: inherit;
+  padding: 0 10px 0 0;
+  height: 35px;
+  width: 35px;
 }
