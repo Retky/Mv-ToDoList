@@ -7,9 +7,26 @@ body {
   list-style: none;
   padding: 0;
   filter: drop-shadow(3px 3px 2px #ccc);
+  max-width: 350px;
 }
 
-#todoList li {
+h1 {
+  font-size: 1rem;
+}
+
+#addTask {
+  border: none;
+  font-style: italic;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+
+.task {
   border-bottom: solid #ccc 1px;
   padding: 10px;
+}
+
+#add {
+  padding: 0;
 }
