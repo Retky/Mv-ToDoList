@@ -31,6 +31,7 @@ const listen = (taskList, trashImg) => {
       addToLi(input.value, taskList.length, trashImg)
 
       input.value = '';
+      console.log(taskList);
     }
   })
 }
