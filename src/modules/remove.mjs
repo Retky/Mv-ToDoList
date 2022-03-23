@@ -1,7 +1,5 @@
 // remove
-const item = todoList.querySelector('.remove')
-
-const remove = (item, index, taskList) => {
+const remove = (item, index, taskList, todoList) => {
   item.addEventListener('click', () => {
     const newList = taskList;
     newList.splice(index, 1);

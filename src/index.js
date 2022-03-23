@@ -16,9 +16,7 @@ addBtn.appendChild(enter)
 
 // Display list
 taskList.forEach((item) => {
-  todoList.appendChild(newLi(item.name, item.index, item.compleated, trashImg, taskList));
+  todoList.appendChild(newLi(item.name, item.index, item.compleated, trashImg, taskList, todoList));
 });
 
 listen(taskList, trashImg)
-
-// todoList //Page
