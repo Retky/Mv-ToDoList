@@ -1,24 +1,7 @@
 import './style.css';
+import {taskList} from './modules/taskList.mjs';
 
 const todoList = document.getElementById('todoList');
-
-const list = [
-  {
-    name: 'laundry',
-    compleated: false,
-    index: 0,
-  },
-  {
-    name: 'litter',
-    compleated: true,
-    index: 1,
-  },
-  {
-    name: 'dishes',
-    compleated: false,
-    index: 2,
-  },
-];
 
 const newLi = (name, index, compleated) => {
   const element = document.createElement('li');
@@ -31,6 +14,6 @@ const newLi = (name, index, compleated) => {
   return element;
 };
 
-list.forEach((item) => {
+taskList.forEach((item) => {
   todoList.appendChild(newLi(item.name, item.index, item.compleated));
 });
