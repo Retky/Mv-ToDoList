@@ -2,24 +2,9 @@ import './style.css';
 import enterImg from './img/enter.png';
 import {taskList} from './modules/taskList.mjs';
 import listen  from './modules/addTask.mjs';
+import newLi from './modules/taskBuild.mjs'
 
 const todoList = document.getElementById('todoList');
-
-const newLi = (name, index, compleated) => {
-  const element = document.createElement('li');
-  element.classList = 'task'
-  if (compleated) {
-    element.innerHTML = `<input type="checkbox" name="${index}" checked><label for="${index}">${name}</label>`;
-    return element;
-  }
-  element.innerHTML = `<input class="task" type="checkbox" name="${index}"><label for="${index}">${name}</label>`;
-  return element;
-};
-
-// Display list
-taskList.forEach((item) => {
-  todoList.appendChild(newLi(item.name, item.index, item.compleated));
-});
 
 // Enter Button
 const addBtn = document.getElementById('enter')
@@ -27,5 +12,10 @@ const enter = new Image();
 enter.src = enterImg;
 enter.style.width = '100%';
 addBtn.appendChild(enter)
+
+// Display list
+taskList.forEach((item) => {
+  todoList.appendChild(newLi(item.name, item.index, item.compleated));
+});
 
 listen(taskList)
