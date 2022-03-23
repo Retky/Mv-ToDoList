@@ -8,7 +8,6 @@ const remove = (item, index, taskList, todoList) => {
       item.index = i
     });
     todoList.removeChild(item)
-    console.log(taskList);
   })
 }
 

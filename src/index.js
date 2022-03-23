@@ -19,4 +19,4 @@ taskList.forEach((item) => {
   todoList.appendChild(newLi(item.name, item.index, item.compleated, trashImg, taskList, todoList));
 });
 
-listen(taskList, trashImg)
+listen(taskList, trashImg, todoList)
