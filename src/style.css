@@ -2,12 +2,16 @@ body {
   background-color: #eee;
 }
 
-#todoList {
+#todoDiv {
   background: #fff;
-  list-style: none;
-  padding: 0;
   filter: drop-shadow(3px 3px 2px #ccc);
   max-width: 350px;
+}
+
+#todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {

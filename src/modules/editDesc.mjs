@@ -1,4 +1,4 @@
-import toLS from './saveLocalStorage.mjs'
+import toLS from './saveLocalStorage.mjs';
 
 // Edit description
 const editTask = (element, taskList) => {
@@ -12,19 +12,19 @@ const editTask = (element, taskList) => {
   });
 
   label.addEventListener('focusout', () => {
-        description = label.innerHTML;
-        taskList[index].name = description;
-        label.contentEditable = false;
-        toLS(taskList);
+    description = label.innerHTML;
+    taskList[index].name = description;
+    label.contentEditable = false;
+    toLS(taskList);
   });
   label.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       description = label.innerHTML;
-      taskList[index].name = description
+      taskList[index].name = description;
       label.contentEditable = false;
       toLS(taskList);
     }
   });
-}
+};
 
-export default editTask
+export default editTask;

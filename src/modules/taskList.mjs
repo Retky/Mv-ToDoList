@@ -1,9 +1,15 @@
-let taskList = [];
+class List {
+  constructor() {
+    this.list = [];
+  }
+}
+
+const task = new List();
 
 // Load from Local Storage
 if (localStorage.taskList) {
   const from = JSON.parse(localStorage.taskList);
-  taskList = from;
+  task.list = from;
 }
 
-export {taskList}
+export default task;
