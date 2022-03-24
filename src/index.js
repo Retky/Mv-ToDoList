@@ -17,7 +17,7 @@ addBtn.appendChild(enter);
 // Display list
 task.list.forEach((item) => {
   todoList.appendChild(
-    newLi(item.name, item.index, item.compleated, trashImg, task.list, todoList),
+    newLi(item.name, item.index, item.completed, trashImg, task.list, todoList),
   );
 });
 
