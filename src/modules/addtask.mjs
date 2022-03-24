@@ -1,4 +1,6 @@
 import remove from './remove.mjs'
+import editTask from './editDesc.mjs'
+import toLS from './saveLocalStorage.mjs'
 
 const addDiv = document.getElementById('add')
 const input = document.getElementById('addTask')
@@ -22,6 +24,7 @@ const addToLi = (name, index, trashImg, taskList, todoList) => {
   element.innerHTML = `<input type="checkbox" name="${index}"><label for="${index}">${name}</label><div class="remove"><img src=${trashImg} alt="remove"/>`;
   todoList.appendChild(element);
   remove(element, index, taskList, todoList);
+  editTask(element, taskList);
 };
 
 // Add task to the list and display
@@ -33,6 +36,7 @@ const listen = (taskList, trashImg, todoList) => {
       taskList.push(newTask(input.value, taskList.length))
 
       input.value = '';
+      toLS(taskList);
     }
   })
 }

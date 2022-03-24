@@ -3,7 +3,7 @@ import enterImg from './img/enter.png';
 import trashImg from './img/trash.png';
 import {taskList} from './modules/taskList.mjs';
 import listen  from './modules/addTask.mjs';
-import newLi from './modules/taskBuild.mjs'
+import newLi from './modules/taskBuild.mjs';
 
 const todoList = document.getElementById('todoList');
 

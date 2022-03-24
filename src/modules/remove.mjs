@@ -1,3 +1,5 @@
+import toLS from './saveLocalStorage.mjs'
+
 // remove
 const remove = (item, index, taskList, todoList) => {
   const removeIco = item.querySelector('.remove')
@@ -8,6 +10,8 @@ const remove = (item, index, taskList, todoList) => {
     taskList.forEach((item, i) => {
       item.index = i
     });
+
+    toLS(taskList);
     todoList.removeChild(item)
   })
 }
