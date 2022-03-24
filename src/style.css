@@ -55,6 +55,10 @@ h1 {
   width: 35px;
 }
 
+#enter:hover {
+  cursor: pointer;
+}
+
 .remove {
   height: 20px;
   width: 20px;
@@ -63,4 +67,22 @@ h1 {
 
 .remove img {
   height: 100%;
+}
+
+.remove img:hover {
+  cursor: pointer;
+}
+
+#clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  background: #eee;
+}
+
+#clear:hover {
+  color: #fff;
+  background: #bbb;
+  cursor: pointer;
 }
