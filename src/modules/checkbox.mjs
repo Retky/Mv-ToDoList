@@ -1,8 +1,8 @@
 import toLS from './saveLocalStorage.mjs';
 
 const checkBox = (element, index, taskList) => {
-  const box = element.querySelector('input')
-  box.addEventListener('change', (e) => {
+  const box = element.querySelector('input');
+  box.addEventListener('change', () => {
     if (box.checked) {
       taskList[index].completed = true;
       toLS(taskList);
@@ -11,6 +11,6 @@ const checkBox = (element, index, taskList) => {
       toLS(taskList);
     }
   });
-}
+};
 
-export default checkBox
+export default checkBox;

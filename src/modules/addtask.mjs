@@ -1,7 +1,7 @@
 import remove from './remove.mjs';
 import editTask from './editDesc.mjs';
 import toLS from './saveLocalStorage.mjs';
-import checkBox from './checkBox.mjs';
+import checkBox from './checkbox.mjs';
 
 const addDiv = document.getElementById('add');
 const input = document.getElementById('addTask');
@@ -26,7 +26,7 @@ const addToLi = (name, index, trashImg, taskList, todoList) => {
   todoList.appendChild(element);
   remove(element, index, taskList, todoList);
   editTask(element, taskList);
-  checkBox(element, index, taskList)
+  checkBox(element, index, taskList);
 };
 
 // Add task to the list and display
