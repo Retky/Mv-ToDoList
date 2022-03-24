@@ -32,6 +32,10 @@ h1 {
   display: flex;
 }
 
+.task label {
+  flex-grow: 3;
+}
+
 #add {
   padding: 0;
   display: flex;

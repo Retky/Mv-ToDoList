@@ -19,7 +19,7 @@ const addToLi = (name, index, trashImg, taskList, todoList) => {
   const element = document.createElement('li');
   element.classList = 'task'
 
-  element.innerHTML = `<input class="task" type="checkbox" name="${index}"><label for="${index}">${name}</label><div class="remove"><img src=${trashImg} alt="remove"/>`;
+  element.innerHTML = `<input type="checkbox" name="${index}"><label for="${index}">${name}</label><div class="remove"><img src=${trashImg} alt="remove"/>`;
   todoList.appendChild(element);
   remove(element, index, taskList, todoList);
 };

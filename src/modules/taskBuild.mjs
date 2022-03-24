@@ -9,7 +9,7 @@ const newLi = (name, index, compleated, trashImg, taskList, todoList) => {
     remove(element, index, taskList, todoList);
     return element;
   }
-  element.innerHTML = `<input class="task" type="checkbox" name="${index}"><label for="${index}">${name}</label><div class="remove"><img src=${trashImg} alt="remove"/>`;
+  element.innerHTML = `<input type="checkbox" name="${index}"><label for="${index}">${name}</label><div class="remove"><img src=${trashImg} alt="remove"/>`;
   remove(element, index, taskList, todoList);
   return element;
 };
