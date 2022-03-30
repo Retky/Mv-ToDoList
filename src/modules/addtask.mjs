@@ -30,7 +30,7 @@ const addToLi = (name, index, trashImg, taskList, todoList) => {
 };
 
 // Add task to the list and display
-const listen = (taskList, trashImg, todoList) => {
+const listen = (taskList, trashImg, todoList, addDiv, input) => {
   addDiv.addEventListener('submit', (e) => {
     e.preventDefault();
     if (input.value) {
@@ -43,4 +43,4 @@ const listen = (taskList, trashImg, todoList) => {
   });
 };
 
-export {listen, addToLi};
+export {listen, addToLi, newTask};
