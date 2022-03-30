@@ -1,37 +1,18 @@
-import testAddToLi from '../addtask.mjs'
- 
+/**
+ * @jest-environment jsdom
+ */
 
-const testAddToLi = (name, index, trashImg, taskList, todoList) => {
-  const element = document.createElement('li');
-  element.classList = 'task';
-  element.innerHTML = `<input type="checkbox" name="${index}"><label for="${index}">${name}</label><div class="remove"><img src=${trashImg} alt="remove"/>`;
-  todoList.appendChild(element);
-  remove(element, index, taskList, todoList);
-  editTask(element, taskList);
-  checkBox(element, index, taskList);
-};
+import {addToLi} from '../addtask'
 
-// Create testcase to add UL to mock DOM
-const testAddToLi = (name, index, trashImg, taskList, todoList) => {
-  const element = document.createElement('li');
-  element.classList = 'task';
-  element.innerHTML = `<input type="checkbox" name="${index}"><label for="${index}">${name}</label><div class="remove"><img src=${trashImg} alt="remove"/>`;
-  todoList.appendChild(element);
-  remove(element, index, taskList, todoList);
-  editTask(element, taskList);
-  checkBox(element, index, taskList);
-};
+describe('add to UL', () => {
+  test('add', () => {
+    document.body.innerHTML = '<ul id="todoList"></li>';
 
-// Create testcase to add UL to mock DOM
-const testAddToLi = (name, index, trashImg, taskList, todoList) => {
-  const element = document.createElement('li');
-  element.classList = 'task';
-  element.innerHTML = `<input type="checkbox" name="${index}"><label for="${index}">${name}</label><div class="remove"><img src=${trashImg} alt="remove"/>`;
-  todoList.appendChild(element);
-  remove(element, index, taskList, todoList);
-  editTask(element, taskList);
-  checkBox(element, index, taskList);
-};
+    const todoList = document.querySelector('#todoList')
 
-// Create testcase to add UL to mock DOM
-const testAddToLi = (name, index
+    addToLi("name", 1, "trashImg", "taskList", todoList)
+    const list = document.querySelectorAll('#todoList li');
+
+     expect(list).toHaveLength(1);
+  });
+});

@@ -43,4 +43,4 @@ const listen = (taskList, trashImg, todoList) => {
   });
 };
 
-export default listen;
+export {listen, addToLi};
