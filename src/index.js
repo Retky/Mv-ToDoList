@@ -2,7 +2,7 @@ import './style.css';
 import enterImg from './img/enter.png';
 import trashImg from './img/trash.png';
 import task from './modules/taskList.mjs';
-import listen from './modules/addtask.mjs';
+import { listen } from './modules/addtask.mjs';
 import newLi from './modules/taskBuild.mjs';
 import clear from './modules/clearComp.mjs';
 

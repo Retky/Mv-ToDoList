@@ -2,17 +2,17 @@
  * @jest-environment jsdom
  */
 
-import {listen, addToLi, newTask} from '../addtask'
+import { listen, addToLi } from '../addtask.mjs';
 
 describe('addToLi Function', () => {
   test('add Li element', () => {
     document.body.innerHTML = '<ul id="todoList"></li>';
 
-    const todoList = document.querySelector('#todoList')
+    const todoList = document.querySelector('#todoList');
 
-    addToLi("name", 1, "trashImg", "taskList", todoList)
+    addToLi('name', 1, 'trashImg', 'taskList', todoList);
     const list = document.querySelectorAll('#todoList li');
-     expect(list).toHaveLength(1);
+    expect(list).toHaveLength(1);
   });
 });
 
@@ -22,14 +22,12 @@ describe('listen Function', () => {
 
     const todoList = document.querySelector('#todoList');
     const taskList = [];
-    const addDiv = document.getElementById('add');
-    const input = document.getElementById('addTask');
     const button = document.querySelector('#enter');
 
-    listen(taskList, "trashImg", todoList, addDiv, input)
-    button.click()
+    listen(taskList, 'trashImg', todoList);
+    button.click();
 
     const list = document.querySelectorAll('#todoList li');
-     expect(list).toHaveLength(1);
+    expect(list).toHaveLength(1);
   });
 });
