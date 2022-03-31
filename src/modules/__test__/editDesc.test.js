@@ -19,3 +19,42 @@ beforeAll(() => {
     </div>
 </body>`
 });
+describe('edit Task description', () => {
+  test('one', () => {
+    const element = document.querySelector('li')
+    const lab = document.querySelector('label')
+    const taskList = [{name: "Feed cats", completed: false, index: 0}]
+
+    editTask (element, taskList)
+
+    lab.click()
+
+    expect(lab.contentEditable).toBeTruthy();
+  });
+
+  test('two', () => {
+    const element = document.querySelector('li')
+    const lab = document.querySelector('label')
+    const taskList = [{name: "Feed cats", completed: false, index: 0}]
+
+    editTask (element, taskList)
+
+    lab.focus()
+    lab.dispatchEvent(new KeyboardEvent('keypress', {'key': 'Enter'}));
+
+    expect(taskList[0].name).toBe('Feed dogs');
+  });
+
+  test('three', () => {
+    const element = document.querySelector('li')
+    const lab = document.querySelector('label')
+    const taskList = [{name: "Feed cats", completed: false, index: 0}]
+
+    editTask (element, taskList)
+
+    lab.focus()
+    lab.dispatchEvent(new Event('focusout'));
+
+    expect(taskList[0].name).toBe('Feed dogs');
+  });
+});
