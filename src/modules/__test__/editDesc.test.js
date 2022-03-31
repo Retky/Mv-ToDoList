@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import editTask from '../editDesc.mjs'
+import editTask from '../editDesc.mjs';
 
 beforeAll(() => {
   document.body.innerHTML = `<body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1055.0">
@@ -17,42 +17,42 @@ beforeAll(() => {
         <p>Clear all completed</p>
       </div>
     </div>
-</body>`
+</body>`;
 });
 describe('edit Task description', () => {
   test('one', () => {
-    const element = document.querySelector('li')
-    const lab = document.querySelector('label')
-    const taskList = [{name: "Feed cats", completed: false, index: 0}]
+    const element = document.querySelector('li');
+    const lab = document.querySelector('label');
+    const taskList = [{ name: 'Feed cats', completed: false, index: 0 }];
 
-    editTask (element, taskList)
+    editTask(element, taskList);
 
-    lab.click()
+    lab.click();
 
     expect(lab.contentEditable).toBeTruthy();
   });
 
   test('two', () => {
-    const element = document.querySelector('li')
-    const lab = document.querySelector('label')
-    const taskList = [{name: "Feed cats", completed: false, index: 0}]
+    const element = document.querySelector('li');
+    const lab = document.querySelector('label');
+    const taskList = [{ name: 'Feed cats', completed: false, index: 0 }];
 
-    editTask (element, taskList)
+    editTask(element, taskList);
 
-    lab.focus()
-    lab.dispatchEvent(new KeyboardEvent('keypress', {'key': 'Enter'}));
+    lab.focus();
+    lab.dispatchEvent(new KeyboardEvent('keypress', { key: 'Enter' }));
 
     expect(taskList[0].name).toBe('Feed dogs');
   });
 
   test('three', () => {
-    const element = document.querySelector('li')
-    const lab = document.querySelector('label')
-    const taskList = [{name: "Feed cats", completed: false, index: 0}]
+    const element = document.querySelector('li');
+    const lab = document.querySelector('label');
+    const taskList = [{ name: 'Feed cats', completed: false, index: 0 }];
 
-    editTask (element, taskList)
+    editTask(element, taskList);
 
-    lab.focus()
+    lab.focus();
     lab.dispatchEvent(new Event('focusout'));
 
     expect(taskList[0].name).toBe('Feed dogs');

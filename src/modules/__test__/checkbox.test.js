@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import checkBox from '../checkBox.mjs'
+import checkBox from '../checkbox.mjs';
 
 beforeAll(() => {
   document.body.innerHTML = `<body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1055.0">
@@ -17,27 +17,27 @@ beforeAll(() => {
         <p>Clear all completed</p>
       </div>
     </div>
-</body>`
+</body>`;
 });
 
 describe('CheckBox', () => {
   test('update completed', () => {
-    const taskList = [{name: "Feed dogs", completed: false, index: 0}]
+    const taskList = [{ name: 'Feed dogs', completed: false, index: 0 }];
     const element = document.querySelector('li');
     const check = element.querySelector('input');
 
-    checkBox(element, 0, taskList)
+    checkBox(element, 0, taskList);
     check.click();
 
     expect(taskList[0].completed).toBeTruthy();
   });
 
   test('update uncompleted', () => {
-    const taskList = [{name: "Feed dogs", completed: true, index: 0}]
+    const taskList = [{ name: 'Feed dogs', completed: true, index: 0 }];
     const element = document.querySelector('li');
     const check = element.querySelector('input');
 
-    checkBox(element, 0, taskList)
+    checkBox(element, 0, taskList);
     check.click();
 
     expect(taskList[0].completed).toBeFalsy();

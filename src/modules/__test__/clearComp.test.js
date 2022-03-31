@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import clear from '../clearComp.mjs'
+import clear from '../clearComp.mjs';
 
 beforeAll(() => {
   document.body.innerHTML = `<body data-new-gr-c-s-check-loaded="14.1055.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1055.0">
@@ -17,21 +17,21 @@ beforeAll(() => {
       <p>Clear all completed</p>
     </div>
   </div>
-</body>`
+</body>`;
 });
 
 describe('clearCompleted', () => {
   test('Remove completed from DOM', () => {
-    const element = document.querySelector('#clear')
-    let taskList = [{name: "Feed cats", completed: true, index: 0},
-     {name: "Dishes", completed: true, index: 1},
-     {name: "Laundry", completed: false, index: 2},
-     {name: "Take a walk", completed: true, index: 3}];
-    const todoList = document.querySelector('#todoList')
+    const element = document.querySelector('#clear');
+    const taskList = [{ name: 'Feed cats', completed: true, index: 0 },
+      { name: 'Dishes', completed: true, index: 1 },
+      { name: 'Laundry', completed: false, index: 2 },
+      { name: 'Take a walk', completed: true, index: 3 }];
+    const todoList = document.querySelector('#todoList');
 
     clear(element, taskList, todoList);
     element.click();
-    const list = todoList.querySelectorAll('li')
+    const list = todoList.querySelectorAll('li');
 
     expect(list).toHaveLength(1);
   });
