@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <div id="todoDiv">
+      <h1 class="task">Today's To Do</h1>
+      <form id="add" class="task">
+        <input id="addTask" type="text" name="addTask" value="" placeholder="Add to your list...">
+        <button type="submit" id="enter"><img src="./img/enter.png" style="width: 100%;"></button>
+      </form>
+      <ul id="todoList">
+      <li class="task"><input type="checkbox" name="0"><label for="0">Laundry</label><div class="remove"><img src="./img/trash.png" alt="remove"></div></li>
+      <li class="task"><input type="checkbox" name="1"><label for="1">Feed cats</label><div class="remove"><img src="./img/trash.png" alt="remove"></div></li>
+      <li class="task"><input type="checkbox" name="2"><label for="2">Dishes</label><div class="remove"><img src="./img/trash.png" alt="remove"></div></li>
+      <li class="task"><input type="checkbox" name="3"><label for="3">Take a Walk</label><div class="remove"><img src="./img/trash.png" alt="remove"></div></li></ul>
+      <div id="clear">
+        <p>Clear all completed</p>
+      </div>
+    </div>
+  </body>
+</html>
