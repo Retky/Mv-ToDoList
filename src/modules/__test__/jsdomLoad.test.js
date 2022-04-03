@@ -8,7 +8,6 @@ beforeAll(() => {
 describe('test DOM', () => {
   test('has a 4 list elements', () => {
     const list = document.querySelectorAll('li');
-    console.log(list.length);
     expect(list).toHaveLength(4)
   });
 });
